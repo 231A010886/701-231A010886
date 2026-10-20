@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng ký | Võ Tấn Đạt</title><link rel="stylesheet" href="css/style.css"><script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><div class="container"><h1>ĐĂNG KÝ TÀI KHOẢN</h1><p>Bài thực hành kiểm tra dữ liệu biểu mẫu</p></div></header>
+  <nav class="site-nav" aria-label="Menu chính"><a href="index.html">Trang chủ</a><a href="baitap01.html">Lý thuyết</a><a class="active" href="baitap02.html">Đăng ký</a><a href="baitap03.html">Đếm ngược</a><a href="about.html">Điểm danh</a><a href="contact.html">Liên hệ</a></nav>
+  <main class="container narrow">
+    <section class="panel">
+      <h2>Thông tin đăng ký</h2>
+      <form id="signupForm" novalidate>
+        <div class="form-field"><label for="fullName">Họ và tên</label><input id="fullName" name="fullName" type="text" required autocomplete="name" placeholder="Nhập họ và tên"></div>
+        <div class="form-field"><label for="signupEmail">Email</label><input id="signupEmail" name="email" type="email" required autocomplete="email" placeholder="ten@example.com"></div>
+        <div class="form-field"><label for="signupPassword">Mật khẩu</label><input id="signupPassword" name="password" type="password" required autocomplete="new-password" placeholder="Ít nhất 8 ký tự"><small>Mật khẩu cần có chữ hoa, chữ thường và chữ số.</small></div>
+        <div class="form-field"><label class="checkbox-label"><input id="showPassword" type="checkbox"> Hiện mật khẩu</label></div>
+        <div class="form-field"><label class="checkbox-label"><input id="acceptTerms" type="checkbox" required> Tôi đồng ý với điều khoản sử dụng.</label></div>
+        <button class="button" type="submit">Đăng ký</button>
+        <p id="signupMessage" class="status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+    <section class="panel"><h2>Lưu ý bảo mật</h2><p>Trang minh họa này lưu tên và email vào LocalStorage của trình duyệt khi dữ liệu hợp lệ. Không lưu mật khẩu vào LocalStorage trong ứng dụng thực tế; cần máy chủ bảo mật, mã hóa đường truyền HTTPS và lưu mật khẩu bằng hàm băm an toàn phía máy chủ.</p></section>
+  </main>
+  <footer class="site-footer"><p>© 2026 Võ Tấn Đạt</p></footer>
+</body>
+</html>

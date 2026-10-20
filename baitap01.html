@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lý thuyết | Võ Tấn Đạt</title><link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header"><div class="container"><h1>PHẦN LÝ THUYẾT</h1><p>Môn Lập trình Web</p></div></header>
+  <nav class="site-nav" aria-label="Menu chính">
+    <a href="index.html">Trang chủ</a><a class="active" href="baitap01.html">Lý thuyết</a><a href="baitap02.html">Đăng ký</a><a href="baitap03.html">Đếm ngược</a><a href="about.html">Điểm danh</a><a href="contact.html">Liên hệ</a>
+  </nav>
+  <main class="container content-stack">
+    <article class="panel"><h2>Câu 1. CSS position và Responsive Design</h2>
+      <h3>Phân biệt relative và absolute</h3>
+      <ul><li><strong>position: relative:</strong> phần tử vẫn giữ vị trí ban đầu trong luồng trang; có thể dịch chuyển bằng top, right, bottom hoặc left. Nó thường tạo mốc định vị cho phần tử con absolute.</li><li><strong>position: absolute:</strong> phần tử bị lấy khỏi luồng thông thường và được định vị theo tổ tiên gần nhất có position khác static; nếu không có thì thường theo khối chứa ban đầu.</li></ul>
+      <h3>Responsive và triển khai website</h3><p>Responsive Design giúp giao diện thích nghi với màn hình điện thoại, máy tính bảng và máy tính bằng viewport, Flexbox/Grid, đơn vị linh hoạt và media query. Khi triển khai, cần kiểm tra nhiều kích thước màn hình, đường dẫn tài nguyên, lỗi trình duyệt và khả năng truy cập.</p>
+    </article>
+    <article class="panel"><h2>Câu 2. Domain, hosting, DNS và triển khai</h2>
+      <ul><li><strong>Domain:</strong> tên miền dễ nhớ trỏ tới website.</li><li><strong>Hosting:</strong> nơi lưu trữ tệp và/hoặc chương trình của website để người dùng truy cập.</li><li><strong>DNS:</strong> hệ thống phân giải tên miền thành địa chỉ máy chủ phù hợp.</li></ul>
+      <p><strong>GitHub Pages:</strong> phù hợp website tĩnh HTML/CSS/JavaScript; đẩy tệp lên repository, chọn nhánh/thư mục trong Settings → Pages và chờ xuất bản. <strong>Netlify:</strong> có thể triển khai website tĩnh từ repository hoặc tải thư mục website lên theo quy trình được hỗ trợ.</p>
+      <p><strong>Bảo mật cơ bản:</strong> không đưa mật khẩu, khóa API hoặc dữ liệu cá nhân nhạy cảm vào mã nguồn công khai; dùng HTTPS; kiểm tra dữ liệu nhập; không chèn dữ liệu người dùng bằng innerHTML; phân quyền repository phù hợp.</p>
+    </article>
+    <article class="panel"><h2>Câu 3. var, let, const, scope, hoisting và debug</h2>
+      <ul><li><strong>var:</strong> có phạm vi hàm hoặc toàn cục, có thể khai báo lại; được hoist và khởi tạo ban đầu là undefined.</li><li><strong>let:</strong> có phạm vi khối, có thể gán lại nhưng không thể khai báo lại cùng phạm vi; nằm trong Temporal Dead Zone trước dòng khai báo.</li><li><strong>const:</strong> có phạm vi khối, bắt buộc gán giá trị lúc khai báo và không thể gán lại biến; thuộc tính bên trong object/array vẫn có thể thay đổi.</li></ul>
+      <p><strong>Hoisting:</strong> khai báo được xử lý trước khi thực thi theo quy tắc của từng loại. Để debug, mở DevTools bằng F12, xem Console, đặt breakpoint trong Sources, kiểm tra biến và đọc thông báo lỗi. Nên dùng let/const và khai báo biến gần nơi sử dụng.</p>
+    </article>
+    <article class="panel"><h2>Câu 4. Event Delegation với danh sách động</h2>
+      <p>Event Delegation là gắn một trình xử lý sự kiện lên phần tử cha thay vì gắn riêng cho từng phần tử con. Sự kiện thường nổi bọt từ con lên cha; có thể dùng event.target và closest() để xác định phần tử được bấm. Cách này hữu ích khi thêm/xóa phần tử động vì phần tử mới vẫn được xử lý mà không cần gắn lại listener.</p>
+      <pre><code>document.querySelector('#list').addEventListener('click', function (event) {
+  const button = event.target.closest('button[data-action="delete"]');
+  if (!button || !this.contains(button)) return;
+  button.closest('li')?.remove();
+});</code></pre>
+      <p>Ví dụ trên chỉ xử lý nút xóa nằm trong danh sách và xóa phần tử li tương ứng.</p>
+    </article>
+    <p><a class="button button-secondary" href="index.html">← Về trang chủ</a></p>
+  </main>
+  <footer class="site-footer"><p>© 2026 Võ Tấn Đạt</p></footer>
+</body>
+</html>

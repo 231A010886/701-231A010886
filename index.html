@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang chủ | Võ Tấn Đạt</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container"><h1>WEBSITE LẬP TRÌNH WEB</h1><p>Võ Tấn Đạt · MSSV 231A010886 · Lớp 261INT440701</p></div>
+  </header>
+  <nav class="site-nav" aria-label="Menu chính">
+    <a class="active" href="index.html">Trang chủ</a>
+    <a href="baitap01.html">Lý thuyết</a>
+    <a href="baitap02.html">Đăng ký</a>
+    <a href="baitap03.html">Đếm ngược</a>
+    <a href="about.html">Điểm danh</a>
+    <a href="contact.html">Liên hệ</a>
+  </nav>
+  <main class="container">
+    <section class="hero panel">
+      <p class="eyebrow">BÀI THI THỰC HÀNH</p>
+      <h2>Chào mừng đến với website của tôi</h2>
+      <p>Website gồm các trang lý thuyết, tìm kiếm sản phẩm, đăng ký tài khoản, đồng hồ đếm ngược và thông tin sinh viên.</p>
+      <div class="button-row"><a class="button" href="baitap01.html">Xem phần lý thuyết</a><a class="button button-secondary" href="about.html">Thông tin sinh viên</a></div>
+    </section>
+    <section class="panel">
+      <h2>Bài thực hành 1: Tìm kiếm sản phẩm</h2>
+      <p>Nhập tên sản phẩm để tìm kiếm. Không phân biệt chữ hoa và chữ thường.</p>
+      <label for="productSearch">Tìm sản phẩm</label>
+      <input id="productSearch" type="search" placeholder="Ví dụ: chuột, tai nghe..." autocomplete="off">
+      <p id="productMessage" class="status" role="status" aria-live="polite"></p>
+      <div id="productList" class="product-grid"></div>
+    </section>
+    <section class="panel">
+      <h2>Các trang trong website</h2>
+      <div class="link-grid">
+        <a class="link-card" href="baitap01.html"><strong>01 · Lý thuyết</strong><span>CSS, hosting, JavaScript và Event Delegation.</span></a>
+        <a class="link-card" href="baitap02.html"><strong>02 · Đăng ký</strong><span>Form có kiểm tra dữ liệu và lưu LocalStorage.</span></a>
+        <a class="link-card" href="baitap03.html"><strong>03 · Đếm ngược</strong><span>Đồng hồ 10 phút với cảnh báo phút cuối.</span></a>
+        <a class="link-card" href="about.html"><strong>04 · Điểm danh</strong><span>Thông tin sinh viên.</span></a>
+        <a class="link-card" href="contact.html"><strong>05 · Liên hệ</strong><span>Thông tin liên hệ và gửi tin nhắn mẫu.</span></a>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><p>© 2026 Võ Tấn Đạt · Website bài thi Lập trình Web</p></footer>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đếm ngược | Võ Tấn Đạt</title><link rel="stylesheet" href="css/style.css"><script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><div class="container"><h1>ĐỒNG HỒ ĐẾM NGƯỢC</h1><p>Bài thực hành JavaScript setInterval</p></div></header>
+  <nav class="site-nav" aria-label="Menu chính"><a href="index.html">Trang chủ</a><a href="baitap01.html">Lý thuyết</a><a href="baitap02.html">Đăng ký</a><a class="active" href="baitap03.html">Đếm ngược</a><a href="about.html">Điểm danh</a><a href="contact.html">Liên hệ</a></nav>
+  <main class="container narrow">
+    <section class="panel timer-panel">
+      <h2>Thời gian còn lại</h2>
+      <div id="timerDisplay" class="timer" role="timer" aria-live="off">10:00</div>
+      <p id="timerMessage" class="status" role="status" aria-live="polite">Nhấn Bắt đầu để chạy bộ đếm 10 phút.</p>
+      <div class="button-row center"><button class="button" id="startTimer" type="button">Bắt đầu</button><button class="button button-secondary" id="pauseTimer" type="button">Tạm dừng</button><button class="button button-light" id="resetTimer" type="button">Đặt lại</button></div>
+      <p class="muted">Khi còn dưới một phút, đồng hồ sẽ nhấp nháy. Khi hết giờ, trang sẽ hiện thông báo.</p>
+    </section>
+    <section class="panel"><h2>Giải thích</h2><p>Bộ đếm dùng setInterval để cập nhật mỗi giây và clearInterval khi tạm dừng, đặt lại hoặc hết giờ nhằm tránh tạo nhiều bộ đếm cùng lúc. Ví dụ thực tế cần đồng bộ thời gian với máy chủ nếu yêu cầu thời gian chính xác.</p></section>
+  </main>
+  <footer class="site-footer"><p>© 2026 Võ Tấn Đạt</p></footer>
+</body>
+</html>
